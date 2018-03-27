@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/link_message_container_view"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/link_message_bubble_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius="4dp"
+            card_view:cardElevation="2dp"
+            card_view:cardPreventCornerOverlap="true"
+            card_view:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp">
+
+                <ImageView
+                    android:id="@+id/link_message_thumbnail"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="@android:color/white"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/link" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_toEndOf="@id/link_message_thumbnail"
+                    android:padding="4dp"
+                    android:background="@android:color/darker_gray"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/link_preview_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:textStyle="bold"
+                        android:maxLines="1"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:layout_marginBottom="4dp"
+                        android:text="The title goes here" />
+
+                    <TextView
+                        android:id="@+id/link_preview_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"
+                        android:layout_marginBottom="3dp"
+                        android:text="Web site description goes here and continues for maximum two lines" />
+
+                    <TextView
+                        android:id="@+id/link_preview_url"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textSize="12sp"
+                        android:paddingBottom="3dp"
+                        android:text="www.example.com" />
+                </LinearLayout>
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
